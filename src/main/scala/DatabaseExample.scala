@@ -25,7 +25,7 @@ object DatabaseExample extends App {
   } catch {
     case e: Exception => e.printStackTrace
   }
-  connection.close
+
 
 
   def hangman(): Unit = {
@@ -68,10 +68,14 @@ object DatabaseExample extends App {
         if (guess == randomword) {
           println(s"\nCongratulations!, the word was $randomword")
           running = false
+
+          connection.close
         }
         if (wrongGuesses == 9) {
           println(s"\nRIP u, the word was, in fact, $randomword")
           running = false
+
+          connection.close
         }
         println("")
       }
