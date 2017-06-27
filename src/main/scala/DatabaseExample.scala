@@ -70,7 +70,7 @@ object DatabaseExample extends App {
           running = false
         }
         if (wrongGuesses == 9) {
-          println(s"\nRIP u, fucker, the word was, in fact, \"$randomword\"")
+          println(s"\nRIP u, the word was, in fact, \"$randomword\"")
           running = false
         }
         println("")
